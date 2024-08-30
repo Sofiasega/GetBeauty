@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Máscara de Pestañas Maybelline Sensational Sky High Very Black x 7,2 ml</title>
+  <!-- Google Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+
+
+<body>
+
+  <!-- Header -->
+  <header class="header-bg-rosa text-center py-4">
+    <img src="../../imagenes/Beauty.png" alt="Logo" class="logo">
+    <!-- Menú principal -->
+    <nav class="navbar navbar-expand-md navbar-light header-bg-rosa">
+      <div class="container">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenu"
+          aria-controls="mainMenu" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="mainMenu">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a href="../../index.html" class="nav-link">Inicio</a></li>
+            <li class="nav-item"><a href="../../Pages/productos.html" class="nav-link">Productos</a></li>
+            <li class="nav-item"><a href="../../Pages/skincare.html" class="nav-link">Skincare</a></li>
+            <li class="nav-item"><a href="../../Pages/contacto.html" class="nav-link">Contacto</a></li>
+            <li class="nav-item"><a href="../../Pages/sucursales.html" class="nav-link">Sucursales</a></li>
+          </ul>
+        </div>
+        <ul class="navbar-nav ml-auto">
+          <!-- Icono del carrito en la navegación -->
+          <li class="nav-item">
+            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#cartModal">
+              <img src="../../imagenes/carro.png" alt="Carrito" width="22">
+              <span id="cartCount" class="badge bg-danger">0</span>
+            </a>
+          </li>
+          <li class="nav-item"><a href="#login" class="nav-link"><img src="../../imagenes/usuario.png" alt="Usuario"
+                width="22"></a></li>
+          <li class="nav-item"><a href="#buscar" class="nav-link"><img src="../../imagenes/lupa.png" alt="Buscar"
+                width="22"></a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <nav class="breadcrumb">
+      <a href="../../index.html">Inicio</a>
+      <p>/</p> <a href="../../Pages/productos.html">Comprar todo</a>
+      <p>/</p> <a href="#">Instant Age Rewind</a>
+    </nav>
+
+    <section class="product-container">
+      <div class="container">
+        <div class="row">
+          <!-- Columna de imágenes del producto -->
+          <div class="col-md-6">
+            <div class="product-gallery">
+              <div class="main-image">
+                <img id="mainImage" src="../../imagenes/productos/57.png" alt="The Falsies Washable Mascara">
+              </div>
+              <div class="thumbnail-images" id="thumbnailImages">
+                <img src="../../imagenes/productos/57.png" alt="Thumbnail 1" class="thumbnail"
+                  onclick="changeImage(this)">
+                <img src="../../imagenes/productos/58.png" alt="Thumbnail 2" class="thumbnail"
+                  onclick="changeImage(this)">
+                <img src="../../imagenes/productos/59.png" alt="Thumbnail 2" class="thumbnail"
+                  onclick="changeImage(this)">
+                <!-- Agrega más miniaturas según sea necesario -->
+              </div>
+              <button class="nav-button prev" onclick="changeImageByArrow(-1)">&#9664;</button>
+              <button class="nav-button next" onclick="changeImageByArrow(1)">&#9654;</button>
+            </div>
+          </div>
+
+          <!-- Columna de detalles del producto -->
+          <div class="col-md-6">
+            <div class="product-details">
+              <h1>Instant Age Rewind</h1>
+              <p class="product-category">Corrector de tratamiento antiojeras</p>
+
+              <section class="product-colors">
+                <h2>Todos los tonos</h2>
+                <div class="color-picker">
+                  <div class="color-option" data-color="#f8d4a4" data-name="Neutralizer"></div>
+                  <div class="color-option" data-color="#f2cda9" data-name="Light"></div>
+                  <div class="color-option" data-color="#d0a982" data-name="Sand"></div>
+                  <div class="color-option" data-color="#d0a982" data-name="Medium"></div>
+                  <div class="color-option" data-color="#d7a088" data-name="Honey"></div>
+                  <div class="color-option" data-color="#f3c9b2" data-name="Fair"></div>
+                  <div class="color-option" data-color="#fcd1c3" data-name="Brightener"></div>
+                  <!-- Agrega más opciones de color según sea necesario -->
+                </div>
+                <div id="color-name">Selecciona un color</div>
+              </section>
+
+              <button class="btn btn-dark">Comprar ahora</button>
+
+              <div class="product-description">
+                <h3>Acerca de</h3>
+                <p>Corrector tapa ojeras y bolsas, corrige imperfecciones, ilumina la mirada y define el rostro. Gracias
+                  a su fórmula con Bayas de Goji, hidrata hasta 12hs el contorno de ojos, trata y reafirma ojeras y
+                  bolsas. Su unico aplicador en esponja cubre fácilmente con precisión y consigue una cobertura que no
+                  reseca ni cuartea. Corrige, Contornea e Ilumina tu rostro con el Instant Age Rewinder de Maybelline
+                  New York.</p>
+              </div>
+
+              <div class="product-benefits">
+                <h3>Beneficios</h3>
+                <p>Este corrector para las ojeras y líneas finas crea al instante un contorno de ojos radiante y
+                  refrescado. Infusionado con bayas de goji y Haloxyl™. Puede que el envase varíe y el que recibas no
+                  sea el visualizado en el sitio.</p>
+              </div>
+
+              <div class="product-application">
+                <h3>Modo de aplicación</h3>
+                <p>Paso 1. Gira el aplicador en la dirección de las flechas hasta que el corrector sea visible en la
+                  esponja. Pueden ser necesarias varias vueltas en el primer uso.<br>
+                  Paso 2. Aplicar el corrector en la zona de debajo de los ojos y difuminar.<br>
+                  Paso 3. Para las ojeras extremas, aplica el neutralizador debajo del corrector.<br>
+                  Paso 4. Para mayor luminosidad, aplica el iluminador en la esquina interna de los ojos, las mejillas,
+                  los huesos de las cejas y el puente de la nariz.</p>
+              </div>
+              <div class="product-application">
+                <h3>Ingredientes</h3>
+                <p>G852364 1 Aqua/Water/Eau, Cyclopentasiloxane, Dimethicone, Isododecane, Glycerin, Peg-9
+                  Polydimethylsiloxyethyl Dimethicone, Butylene Glycol, Dimethicone Crosspolymer, Nylon-12,
+                  Disteardimonium Hectorite, Cyclohexasiloxane, Peg-10 Dimethicone, Cetyl Peg/Ppg-10/1 Dimethicone,
+                  Phenoxyethanol, Sodium Chloride, Polyglyceryl-4 Isostearate, Caprylyl Glycol, Disodium Stearoyl
+                  Glutamate, Ethylhexylglycerin, Methylparaben, Lycium Barbarum Fruit Extract, Chlorphenesin,
+                  Ethylparaben, Aluminum Hydroxide, Peg-9, N-Hydroxysuccinimide, Palmitoyl Oligopeptide, Chrysin,
+                  Palmitoyl Tetr Apeptide-7. [+/- May Contain/Peut Contenir: Ci 77891/Titanium Dioxide, Ci 77491, Ci
+                  77492, Ci 77499/Iron Oxides] F.I.L. D44980/4 U.S.Patente pendiente</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="product-highlight">
+          <h2 class="highlight-title">¡NO VAS A CREER EL CAMBIO!</h2>
+          <p class="highlight-description">Emula el resultado de 8 horas de sueño en menos de un minuto y acaba con las ojeras con el mejor corrector para el contorno de ojos.</p>
+
+          <div class="product-comparison">
+            <div class="comparison-item">
+              <h3 class="comparison-title">Macro antes</h3>
+              <img src="../../imagenes/productos/banner15.jpg" alt="Before Image" class="comparison-image">
+            </div>
+
+            <div class="comparison-item">
+              <h3 class="comparison-title">Macro después</h3>
+              <img src="../../imagenes/productos/banner16.jpg" alt="After Image" class="comparison-image">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white pt-5 pb-3">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <h5>CONTACTO</h5>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-white">Atención al Cliente</a></li>
+            <li><a href="#" class="text-white">FAQs</a></li>
+            <li><a href="#" class="text-white">Encuentra tu tienda</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h5>INFORMACIÓN</h5>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-white">Nosotros</a></li>
+            <li><a href="#" class="text-white">Carreras</a></li>
+            <li><a href="#" class="text-white">Política de Privacidad</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h5>REDES SOCIALES</h5>
+          <div class="social-links">
+            <a href="#" class="text-white me-3"><img src="../../imagenes/facebook.png" alt="Facebook"
+                class="social-icon"></a>
+            <a href="#" class="text-white me-3"><img src="../../imagenes/instagram.png" alt="Instagram"
+                class="social-icon"></a>
+            <a href="#" class="text-white me-3"><img src="../../imagenes/x.png" alt="Twitter" class="social-icon"></a>
+            <a href="#" class="text-white"><img src="../../imagenes/tiktok.png" alt="YouTube" class="social-icon"></a>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <h5>SUSCRÍBETE</h5>
+          <form class="d-flex flex-column">
+            <input type="email" class="form-control mb-2" placeholder="Tu email">
+            <button type="submit" class="btn btn-primary">Suscribirse</button>
+          </form>
+        </div>
+      </div>
+      <div class="text-center mt-4">
+        <p>&copy; 2024 Get Beauty. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal del carrito -->
+  <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="cartModalLabel">Tu Carrito</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <ul id="cartItems" class="list-group">
+            <!-- Los productos se añadirán aquí -->
+          </ul>
+          <div class="mt-3">
+            <strong>Total:</strong> <span id="cartTotal">$0.00</span>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary">Proceder al pago</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast para notificaciones -->
+  <div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="notificationToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header">
+        <strong class="me-auto">Notificación</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body">
+        Producto añadido al carrito.
+      </div>
+    </div>
+  </div>
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="../../js/main.js"></script>
+  <script src="../../js/color-producto.js"></script>
+  <script src="../../js/carrusel-productos.js"></script>
+
+</body>
+
+</html>

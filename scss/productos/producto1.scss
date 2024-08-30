@@ -1,0 +1,331 @@
+/* Contenedor principal del producto */
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: -20px;
+    gap: 20px; /* Añade un gap para controlar el espacio entre la galería y las descripciones */
+}
+
+/* Galería de imágenes del producto */
+.product-gallery {
+    flex: 1;
+    max-width: 400px; /* Ajusta el ancho máximo de la galería si es necesario */
+    position: relative; /* Necesario para la posición absoluta de las flechas */
+}
+
+/* Detalles del producto */
+.product-details {
+    flex: 1;
+    margin-left: 10px; /* Reduce el margen izquierdo */
+    padding: 0; /* Elimina cualquier relleno adicional */
+}
+
+/* Estilo para el contenedor de las descripciones */
+.product-description {
+    margin-top: 10px; /* Ajusta el margen superior para reducir el espacio entre secciones */
+}
+
+/* Imagen principal del producto */
+.main-image img {
+    width: 90%; /* Ajusta el ancho según sea necesario para hacer la imagen más pequeña */
+    height: auto; /* Mantiene la proporción de aspecto de la imagen */
+    border-radius: 10px;
+    display: block; /* Asegura que la imagen ocupe el espacio disponible */
+    margin: 0 auto; /* Centra la imagen en el contenedor */
+}
+
+/* Estilo para las miniaturas */
+.thumbnail {
+    width: 80px; /* Ajusta según sea necesario */
+    cursor: pointer; /* Cambia el cursor al pasar sobre la miniatura */
+    border: 2px solid transparent; /* Borde por defecto */
+    transition: border-color 0.3s; /* Transición suave para el borde */
+}
+
+/* Estilo para la miniatura activa */
+.thumbnail.active {
+    border-color: #000; /* Color del borde para la miniatura activa */
+}
+
+/* Estilo para el contenedor de miniaturas */
+.thumbnail-images {
+    display: none; /* Oculta las miniaturas */
+}
+
+/* Estilo para las imágenes en el contenedor de miniaturas */
+.thumbnail-images img {
+    width: 18%;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+/* Botones de navegación */
+.nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    color: white;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 10;
+}
+
+/* Flechas para la imagen principal */
+.prev-main {
+    left: 10px; /* Posición de la flecha anterior en la imagen principal */
+}
+
+.next-main {
+    right: 10px; /* Posición de la flecha siguiente en la imagen principal */
+}
+
+/* Flechas para las miniaturas */
+.prev-thumbnails {
+    left: 10px; /* Posición de la flecha anterior en las miniaturas */
+}
+
+.next-thumbnails {
+    right: 10px; /* Posición de la flecha siguiente en las miniaturas */
+}
+
+/* Detalles del producto */
+.product-details {
+    flex: 1;
+    margin-left: 20px;
+}
+
+h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.product-category {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #888;
+}
+
+h2 {
+    font-size: 16px;
+    margin-left: -400px;
+}
+
+h3 {
+    margin-bottom: 10px;
+    font-size: 22px;
+}
+
+.acerca-de {
+    font-size: 17px;
+}
+
+.modo {
+    font-size: 17px;
+}
+
+.color-picker {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.color-option {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    transition: transform 0.3s ease, border 0.3s ease;
+    display: inline-block;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.color-option.selected {
+    border: 2px solid #000000; /* Borde negro cuando está seleccionado */
+    transform: scale(1.2); /* Aumentar tamaño del círculo */
+}
+
+#color-name {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Botones de interacción */
+.btn-ar, .btn-dark {
+    display: inline-block;
+    margin: 10px 10px 10px 0;
+    padding: 10px 20px;
+    background-color: #d6247c;
+    color: #fff;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn-ar {
+    background-color: #555;
+}
+
+/* Descripción del producto y secciones adicionales */
+.product-details, .product-description, .product-benefits, .product-application {
+    margin-top: 20px;
+}
+
+/* Estilos para la sección del banner */
+.banner {
+    width: 70%;
+    height: auto;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px !important;
+    margin-left: 200px;
+}
+
+/* Estilos para la imagen del banner */
+.banner-content img {
+    width: 100%;
+    height: auto;
+    max-width: 1200px;
+}
+
+p{
+    font-size: 16px;
+}
+
+hr {
+    height: 3px; /* Ajusta el grosor */
+    background-color: #000; /* Color de la línea */
+    border: none; /* Quita cualquier borde por defecto */
+}
+
+.product-promotion {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0;
+    padding: 20px;
+}
+
+.promotion-text {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.promotion-text h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    margin-left: 0px;
+}
+
+.promotion-text p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.carousel {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+}
+
+.carousel-inner {
+    display: flex;
+    width: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    min-width: 100%;
+    transition: opacity 0.5s ease-in-out;
+    opacity: 0;
+    display: none; /* Oculta todos los elementos por defecto */
+}
+
+.carousel-item.active {
+    opacity: 1;
+    display: block; /* Muestra solo el elemento activo */
+}
+
+.carousel img {
+    width: 100%;
+    display: block;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.carousel-control-prev {
+    left: 0;
+}
+
+.carousel-control-next {
+    right: 0;
+}
+
+.product-highlight {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.highlight-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.highlight-description {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.product-comparison {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.comparison-item {
+    text-align: center;
+    max-width: 300px;
+}
+
+.comparison-title {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.comparison-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+

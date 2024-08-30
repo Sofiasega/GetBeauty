@@ -1,0 +1,221 @@
+/* Estilos generales para el cuerpo y la fuente */
+a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 12px;
+  margin-top: -10px;
+}
+
+p {
+  text-decoration: none;
+  color: inherit;
+  font-size: 12px;
+  margin-top: -10px;
+}
+
+/* Estilos para el banner */
+.banner {
+  margin-top: -25px !important;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 500px; /* Aumenta la altura del banner según sea necesario */
+  z-index: 1; /* Asegura que el banner esté por encima de otros elementos */
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-images {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-images img {
+  display: none; /* Oculta todas las imágenes por defecto */
+  width: 100%;
+  height: 100%; /* Asegura que la imagen ocupe todo el contenedor */
+  object-fit: cover; /* Asegura que la imagen cubra el contenedor sin distorsionarse */
+}
+
+.carousel-images img.active {
+  display: block; /* Muestra solo la imagen activa */
+}
+
+button.prev, button.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  z-index: 2; /* Asegura que los botones estén por encima de las imágenes */
+}
+
+button.prev {
+  left: 10px;
+}
+
+button.next {
+  right: 10px;
+}
+
+/* Estilos para el contenedor principal */
+main {
+  padding: 20px;
+}
+
+/* Estilos para el contenedor de productos */
+#product-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.product-content {
+  margin-top: 20px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Ajustar el ancho mínimo */
+  gap: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Estilos para la tarjeta de producto */
+.product-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.product-gallery {
+  position: relative;
+}
+
+.main-image {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.thumbnail-container {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  overflow-x: auto;
+}
+
+.product-thumbnail {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+
+.product-thumbnail.active {
+  border-color: #e988b5;
+}
+
+/* Estilo para el título del producto */
+.product-card h2 {
+  font-size: 0.9rem !important;
+  margin: 20px 0 10px; /* Añadir margen superior de 20px */
+  text-align: left; /* Alinea el texto a la izquierda */
+}
+
+/* Estilo para la descripción del producto */
+.product-card p {
+  font-size: 0.9rem;
+  margin: 0 0 15px;
+}
+
+/* Estilo para el precio del producto */
+.product-card .card-text strong {
+  font-size: 1.1rem;
+  color: #e988b5;
+}
+
+.product-card a {
+  color: #b8038b;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+/* Estilos para el menú desplegable */
+.form-select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  margin-bottom: 20px; /* Espacio entre los menús */
+}
+
+/* Estilos para el contenedor de filtros */
+.filters-sidebar {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 400px; /* Aumenta el ancho del contenedor de filtros */
+  margin-right: 20px; /* Espacio entre la barra lateral y el contenedor de productos */
+  margin-top: 20px;
+}
+
+/* Estilos para los grupos de filtros */
+.filter-group {
+  display: flex;
+  flex-direction: row; /* Cambia la dirección del flex a horizontal */
+  gap: 20px; /* Espacio entre los filtros */
+  margin-bottom: 20px; /* Espacio entre el grupo de filtros y otros elementos */
+}
+
+.filter-dropdown {
+  flex: 1; /* Cada filtro ocupa el mismo espacio */
+}
+
+.filter-dropdown label {
+  display: block; /* Asegura que las etiquetas se muestren encima de los menús desplegables */
+  margin-bottom: 5px; /* Espacio entre la etiqueta y el menú desplegable */
+}
+
+/* Estilos para los botones de acción */
+.filter-actions {
+  display: flex !important;
+  justify-content: flex-start !important;
+  gap: 10px !important;
+  margin-top: -30px !important;
+}
+
+.btn-clear, .btn-apply {
+  background-color: #ec78e7;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+  display: inline-block; /* Asegura que los botones se alineen en una línea */
+}
+
+.btn-clear {
+  background-color: #ccc;
+}
+
+.btn-clear:hover, .btn-apply:hover {
+  background-color: #0056b3;
+}

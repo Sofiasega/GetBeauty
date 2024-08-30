@@ -1,0 +1,23 @@
+/* Estilos para el artículo */
+main {
+    background-color: #f5e2f3;
+}
+
+.routine-builder {
+    background-color: $background-color;
+}
+
+article {
+    text-align: left;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+article h1 {
+    margin-top: 20px;
+    font-size: 35px; /* Tamaño de fuente para el título */
+}
+
+article p, article ol {
+    margin-top: 10px;
+}

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Máscara de Pestañas Maybelline Sensational Sky High Very Black x 7,2 ml</title>
+  <!-- Google Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../../css/style.css">
+</head>
+
+
+<body>
+
+  <!-- Header -->
+  <header class="header-bg-rosa text-center py-4">
+    <img src="../../imagenes/Beauty.png" alt="Logo" class="logo">
+    <!-- Menú principal -->
+    <nav class="navbar navbar-expand-md navbar-light header-bg-rosa">
+      <div class="container">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenu"
+          aria-controls="mainMenu" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="mainMenu">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a href="../../index.html" class="nav-link">Inicio</a></li>
+            <li class="nav-item"><a href="../../Pages/productos.html" class="nav-link">Productos</a></li>
+            <li class="nav-item"><a href="../../Pages/skincare.html" class="nav-link">Skincare</a></li>
+            <li class="nav-item"><a href="../../Pages/contacto.html" class="nav-link">Contacto</a></li>
+            <li class="nav-item"><a href="../../Pages/sucursales.html" class="nav-link">Sucursales</a></li>
+          </ul>
+        </div>
+        <ul class="navbar-nav ml-auto">
+          <!-- Icono del carrito en la navegación -->
+          <li class="nav-item">
+            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#cartModal">
+              <img src="../../imagenes/carro.png" alt="Carrito" width="22">
+              <span id="cartCount" class="badge bg-danger">0</span>
+            </a>
+          </li>
+          <li class="nav-item"><a href="#login" class="nav-link"><img src="../../imagenes/usuario.png" alt="Usuario"
+                width="22"></a></li>
+          <li class="nav-item"><a href="#buscar" class="nav-link"><img src="../../imagenes/lupa.png" alt="Buscar"
+                width="22"></a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <nav class="breadcrumb">
+      <a href="../../index.html">Inicio</a>
+      <p>/</p> <a href="../../Pages/productos.html">Comprar todo</a>
+      <p>/</p> <a href="#">The Falsies Washable Mascara</a>
+    </nav>
+
+    <section class="product-container">
+      <div class="container">
+        <div class="row">
+          <!-- Columna de imágenes del producto -->
+          <div class="col-md-6">
+            <div class="product-gallery">
+              <div class="main-image">
+                <img id="mainImage" src="../../imagenes/productos/52.png" alt="The Falsies Washable Mascara">
+              </div>
+              <div class="thumbnail-images" id="thumbnailImages">
+                <img src="../../imagenes/productos/52.png" alt="Thumbnail 1" class="thumbnail"
+                  onclick="changeImage(this)">
+                <img src="../../imagenes/productos/53.png" alt="Thumbnail 2" class="thumbnail"
+                  onclick="changeImage(this)">
+                <img src="../../imagenes/productos/54.png" alt="Thumbnail 2" class="thumbnail"
+                  onclick="changeImage(this)">
+                <img src="../../imagenes/productos/55.png" alt="Thumbnail 2" class="thumbnail"
+                  onclick="changeImage(this)">
+                <img src="../../imagenes/productos/56.png" alt="Thumbnail 2" class="thumbnail"
+                  onclick="changeImage(this)">
+                <!-- Agrega más miniaturas según sea necesario -->
+              </div>
+              <button class="nav-button prev" onclick="changeImageByArrow(-1)">&#9664;</button>
+              <button class="nav-button next" onclick="changeImageByArrow(1)">&#9654;</button>
+            </div>
+          </div>
+
+          <!-- Columna de detalles del producto -->
+          <div class="col-md-6">
+            <div class="product-details">
+              <h1>Super Stay Matte Ink Edición Music Collection</h1>
+              <p class="product-category">Labial líquido matte</p>
+
+              <section class="product-colors">
+                <h2>Todos los tonos</h2>
+                <div class="color-picker">
+                  <div class="color-option" data-color="#e4623c" data-name="Pioneer"></div>
+                  <div class="color-option" data-color="#b91055" data-name="Founder"></div>
+                  <div class="color-option" data-color="#7f030a" data-name="Seductress"></div>
+                  <div class="color-option" data-color="#bd5d6b" data-name="Amazonian"></div>
+                  <div class="color-option" data-color="#bb232f" data-name="Lover"></div>
+                  <div class="color-option" data-color="#c2746a" data-name="Artist"></div>
+                  <!-- Agrega más opciones de color según sea necesario -->
+                </div>
+                <div id="color-name">Selecciona un color</div>
+              </section>
+
+              <button class="btn btn-dark">Comprar ahora</button>
+
+              <div class="product-description">
+                <h3>Acerca de</h3>
+                <p>Labial líquido matte altamente pigmentado que dura hasta 16horas, ahora celebrando la fusión del
+                  labial número uno de Argentina con la música. Su aplicador en forma de flecha te permitirá delinear
+                  tus labios con mayor precisión. ¡Además,son intransferibles, para que solo te preocupes por lucir unos
+                  labios mate y bailar al ritmo de la música!
+                </p>
+              </div>
+
+              <div class="product-benefits">
+                <h3>Beneficios</h3>
+                <ul>
+                  <li>Labial matte de larga duración</li>
+                  <li>Tonos con gran pigmentación </li>
+                  <li>Hasta 16 hrs de duración, sin transferencias </li>
+                  <li>Aplicador con punta fina, para una aplicación súper precisa</li>
+                </ul>
+              </div>
+
+              <div class="product-application">
+                <h3>Modo de aplicación</h3>
+                <p>Paso 1. Aplica el labial líquido en el centro del labio superior, siguiendo el contorno natural.<br>
+                  Paso 2. Desliza el labial líquido por todo el labio inferior. </p>
+              </div>
+              <div class="product-application">
+                <h3>Ingredientes</h3>
+                <p>G949376 INGREDIENTES: DIMETHICONE TRIMETHYLSILOXYSILICATE ISODODECANE NYLON-611/DIMETHICONE COPOLYMER
+                  DIMETHICONE CROSSPOLYMER C30-45 ALKYLDIMETHYLSILYL POLYPROPYLSILSESQUIOXANE LAUROYL LYSINE ALUMINA
+                  SILICA SILYLATE DISODIUM STEAROYL GLUTAMATE PHENOXYETHANOL CAPRYLYL GLYCOL LIMONENE ALUMINUM HYDROXIDE
+                  PARAFFIN BENZYL BENZOATE BENZYL ALCOHOL CITRONELLOL PARFUM / FRAGRANCE [+/- MAY CONTAIN / PEUT
+                  CONTENIR CI 45410 / RED 28 LAKE CI 77891 / TITANIUM DIOXIDE CI 15850 / RED 7 CI 77491, CI 77492, CI
+                  77499 / IRON OXIDES CI 45380 / RED 22 LAKE CI 15985 / YELLOW 6 LAKE CI 19140 / YELLOW 5 LAKE CI 42090
+                  / BLUE 1 LAKE CI 15850 / RED 6 CI 17200 / RED 33 LAKE MICA] F.I.L. D197345/2</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="product-promotion">
+          <div class="promotion-text">
+            <h2>EDICIÓN LIMITADA</h2>
+            <p>Descubre Music Collection, una edición limitada diseñada para que tu estilo brille al ritmo de la música.
+              Esta colección incluye dos paletas de sombras y seis labiales, permitiéndote crear looks únicos y expresar
+              tu estilo con tonos vibrantes. ¡Deja que la música guíe tu creatividad y deslumbra con un look imparable!
+            </p>
+          </div>
+          <div class="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="../../imagenes/productos/banner12.jpg" alt="Image 1">
+              </div>
+              <div class="carousel-item">
+                <img src="../../imagenes/productos/banner13.jpg" alt="Image 2">
+              </div>
+              <div class="carousel-item">
+                <img src="../../imagenes/productos/banner14.jpg" alt="Image 3">
+              </div>
+            </div>
+            <button class="carousel-control-prev" onclick="prevSlide()">&#10094;</button>
+            <button class="carousel-control-next" onclick="nextSlide()">&#10095;</button>
+          </div>
+        </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white pt-5 pb-3">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <h5>CONTACTO</h5>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-white">Atención al Cliente</a></li>
+            <li><a href="#" class="text-white">FAQs</a></li>
+            <li><a href="#" class="text-white">Encuentra tu tienda</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h5>INFORMACIÓN</h5>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-white">Nosotros</a></li>
+            <li><a href="#" class="text-white">Carreras</a></li>
+            <li><a href="#" class="text-white">Política de Privacidad</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h5>REDES SOCIALES</h5>
+          <div class="social-links">
+            <a href="#" class="text-white me-3"><img src="../../imagenes/facebook.png" alt="Facebook"
+                class="social-icon"></a>
+            <a href="#" class="text-white me-3"><img src="../../imagenes/instagram.png" alt="Instagram"
+                class="social-icon"></a>
+            <a href="#" class="text-white me-3"><img src="../../imagenes/x.png" alt="Twitter" class="social-icon"></a>
+            <a href="#" class="text-white"><img src="../../imagenes/tiktok.png" alt="YouTube" class="social-icon"></a>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <h5>SUSCRÍBETE</h5>
+          <form class="d-flex flex-column">
+            <input type="email" class="form-control mb-2" placeholder="Tu email">
+            <button type="submit" class="btn btn-primary">Suscribirse</button>
+          </form>
+        </div>
+      </div>
+      <div class="text-center mt-4">
+        <p>&copy; 2024 Get Beauty. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal del carrito -->
+  <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="cartModalLabel">Tu Carrito</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <ul id="cartItems" class="list-group">
+            <!-- Los productos se añadirán aquí -->
+          </ul>
+          <div class="mt-3">
+            <strong>Total:</strong> <span id="cartTotal">$0.00</span>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary">Proceder al pago</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast para notificaciones -->
+  <div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="notificationToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header">
+        <strong class="me-auto">Notificación</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body">
+        Producto añadido al carrito.
+      </div>
+    </div>
+  </div>
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="../../js/main.js"></script>
+  <script src="../../js/color-producto.js"></script>
+  <script src="../../js/carrusel-productos.js"></script>
+
+</body>
+
+</html>

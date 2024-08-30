@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sucursales</title>
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header-bg-rosa text-center py-4">
+        <img src="../imagenes/Beauty.png" alt="Logo" class="logo">
+        <!-- Menú principal -->
+        <nav class="navbar navbar-expand-md navbar-light header-bg-rosa">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainMenu"
+                    aria-controls="mainMenu" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center" id="mainMenu">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a href="../index.html" class="nav-link">Inicio</a></li>
+                        <li class="nav-item"><a href="../Pages/productos.html" class="nav-link">Productos</a></li>
+                        <li class="nav-item"><a href="../Pages/skincare.html" class="nav-link">Skincare</a></li>
+                        <li class="nav-item"><a href="../Pages/contacto.html" class="nav-link">Contacto</a></li>
+                        <li class="nav-item"><a href="../Pages/sucursales.html" class="nav-link">Sucursales</a></li>
+                    </ul>
+                </div>
+                <ul class="navbar-nav ml-auto">
+                    <!-- Icono del carrito en la navegación -->
+                    <li class="nav-item">
+                        <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#cartModal">
+                            <img src="../imagenes/carro.png" alt="Carrito" width="22">
+                            <span id="cartCount" class="badge bg-danger">0</span>
+                        </a>
+                    </li>
+                    <li class="nav-item"><a href="#login" class="nav-link"><img src="../imagenes/usuario.png"
+                                alt="Usuario" width="22"></a></li>
+                    <li class="nav-item"><a href="#buscar" class="nav-link"><img src="../imagenes/lupa.png" alt="Buscar"
+                                width="22"></a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="sucursales py-5">
+        <div class="container">
+            <section class="branch-list">
+                <h1 class="text-center mb-4">Nuestras Sucursales</h1>
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <div class="card branch">
+                            <div class="card-body">
+                                <h2 class="card-title">Sucursal Las Rosas</h2>
+                                <p><strong>Dirección:</strong> Independencia 123, Córdoba, Argentina</p>
+                                <p><strong>Teléfono:</strong> +123 456 7890</p>
+                                <p><strong>Email:</strong> lasrosas@getbeauty.com</p>
+                                <p><strong>Horario:</strong> Lunes a Viernes 9:00 AM - 6:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="card branch">
+                            <div class="card-body">
+                                <h2 class="card-title">Sucursal Centro</h2>
+                                <p><strong>Dirección:</strong> Avenida Buenos Aires 456, Córdoba, Argentina</p>
+                                <p><strong>Teléfono:</strong> +123 456 7891</p>
+                                <p><strong>Email:</strong> centro@getbeauty.com</p>
+                                <p><strong>Horario:</strong> Lunes a Sábado 10:00 AM - 7:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Agrega más sucursales según sea necesario -->
+                </div>
+            </section>
+        </div>
+    </main>    
+
+     <!-- Footer -->
+<footer class="bg-dark text-white pt-5 pb-3">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <h5>CONTACTO</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-white">Atención al Cliente</a></li>
+                    <li><a href="#" class="text-white">FAQs</a></li>
+                    <li><a href="#" class="text-white">Encuentra tu tienda</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <h5>INFORMACIÓN</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-white">Nosotros</a></li>
+                    <li><a href="#" class="text-white">Carreras</a></li>
+                    <li><a href="#" class="text-white">Política de Privacidad</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <h5>REDES SOCIALES</h5>
+                <div class="social-links">
+                    <a href="#" class="text-white me-3"><img src="../imagenes/facebook.png" alt="Facebook" class="social-icon"></a>
+                    <a href="#" class="text-white me-3"><img src="../imagenes/instagram.png" alt="Instagram" class="social-icon"></a>
+                    <a href="#" class="text-white me-3"><img src="../imagenes/x.png" alt="Twitter" class="social-icon"></a>
+                    <a href="#" class="text-white"><img src="../imagenes/tiktok.png" alt="YouTube" class="social-icon"></a>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <h5>SUSCRÍBETE</h5>
+                <form class="d-flex flex-column">
+                    <input type="email" class="form-control mb-2" placeholder="Tu email">
+                    <button type="submit" class="btn btn-primary">Suscribirse</button>
+                </form>
+            </div>
+        </div>
+        <div class="text-center mt-4">
+            <p>&copy; 2024 Get Beauty. Todos los derechos reservados.</p>
+        </div>
+    </div>
+</footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <script src="../js/localStorage.js"></script>
+</body>
+
+</html>
