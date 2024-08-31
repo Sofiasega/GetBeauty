@@ -324,7 +324,15 @@ hr {
 }
 
 .comparison-image {
-    width: 100%;
+    width: 100%; /* Ajusta al 100% del ancho del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    width: 400px; /* Ajusta el tamaño máximo si es necesario */
+    margin-left: -50px;
+    display: block; /* Elimina los espacios adicionales debajo de la imagen */
+  }  
+
+.custom-banner{
+    width: 600%;
     height: auto;
     margin-bottom: 10px;
 }

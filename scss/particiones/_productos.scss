@@ -1,12 +1,5 @@
 /* Estilos generales para el cuerpo y la fuente */
-a {
-  text-decoration: none;
-  color: inherit;
-  font-size: 12px;
-  margin-top: -10px;
-}
-
-p {
+a, p {
   text-decoration: none;
   color: inherit;
   font-size: 12px;
@@ -19,8 +12,8 @@ p {
   position: relative;
   overflow: hidden;
   width: 100%;
-  height: 500px; /* Aumenta la altura del banner según sea necesario */
-  z-index: 1; /* Asegura que el banner esté por encima de otros elementos */
+  height: 500px; /* Ajusta según sea necesario */
+  z-index: 1;
 }
 
 .carousel {
@@ -36,14 +29,14 @@ p {
 }
 
 .carousel-images img {
-  display: none; /* Oculta todas las imágenes por defecto */
+  display: none;
   width: 100%;
-  height: 100%; /* Asegura que la imagen ocupe todo el contenedor */
-  object-fit: cover; /* Asegura que la imagen cubra el contenedor sin distorsionarse */
+  height: 100%;
+  object-fit: cover;
 }
 
 .carousel-images img.active {
-  display: block; /* Muestra solo la imagen activa */
+  display: block;
 }
 
 button.prev, button.next {
@@ -54,7 +47,7 @@ button.prev, button.next {
   color: #fff;
   border: none;
   cursor: pointer;
-  z-index: 2; /* Asegura que los botones estén por encima de las imágenes */
+  z-index: 2;
 }
 
 button.prev {
@@ -82,7 +75,7 @@ main {
 
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Ajustar el ancho mínimo */
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 20px;
   padding: 20px;
   box-sizing: border-box;
@@ -130,9 +123,9 @@ main {
 
 /* Estilo para el título del producto */
 .product-card h2 {
-  font-size: 0.9rem !important;
-  margin: 20px 0 10px; /* Añadir margen superior de 20px */
-  text-align: left; /* Alinea el texto a la izquierda */
+  font-size: 0.9rem;
+  margin: 20px 0 10px;
+  text-align: left;
 }
 
 /* Estilo para la descripción del producto */
@@ -161,7 +154,7 @@ main {
   border-radius: 4px;
   border: 1px solid #ccc;
   background-color: #fff;
-  margin-bottom: 20px; /* Espacio entre los menús */
+  margin-bottom: 20px;
 }
 
 /* Estilos para el contenedor de filtros */
@@ -170,34 +163,34 @@ main {
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  width: 400px; /* Aumenta el ancho del contenedor de filtros */
-  margin-right: 20px; /* Espacio entre la barra lateral y el contenedor de productos */
+  width: 400px;
+  margin-right: 20px;
   margin-top: 20px;
 }
 
 /* Estilos para los grupos de filtros */
 .filter-group {
   display: flex;
-  flex-direction: row; /* Cambia la dirección del flex a horizontal */
-  gap: 20px; /* Espacio entre los filtros */
-  margin-bottom: 20px; /* Espacio entre el grupo de filtros y otros elementos */
+  flex-direction: row;
+  gap: 20px;
+  margin-bottom: 20px;
 }
 
 .filter-dropdown {
-  flex: 1; /* Cada filtro ocupa el mismo espacio */
+  flex: 1;
 }
 
 .filter-dropdown label {
-  display: block; /* Asegura que las etiquetas se muestren encima de los menús desplegables */
-  margin-bottom: 5px; /* Espacio entre la etiqueta y el menú desplegable */
+  display: block;
+  margin-bottom: 5px;
 }
 
 /* Estilos para los botones de acción */
 .filter-actions {
-  display: flex !important;
-  justify-content: flex-start !important;
-  gap: 10px !important;
-  margin-top: -30px !important;
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+  margin-top: 10px; /* Ajusta si es necesario */
 }
 
 .btn-clear, .btn-apply {
@@ -209,7 +202,6 @@ main {
   cursor: pointer;
   font-size: 14px;
   transition: background-color 0.3s ease;
-  display: inline-block; /* Asegura que los botones se alineen en una línea */
 }
 
 .btn-clear {
@@ -217,5 +209,5 @@ main {
 }
 
 .btn-clear:hover, .btn-apply:hover {
-  background-color: #0056b3;
+  background-color: #f09ff3;
 }

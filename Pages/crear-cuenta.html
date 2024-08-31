@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Cuenta</title>
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="header-bg text-center py-4">
+        <img src="path/to/logo.png" alt="Logo" class="logo">
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h2 class="card-title text-center mb-4">Crear Cuenta</h2>
+                            <form id="registrationForm">
+                                <div class="mb-3">
+                                    <label for="name" class="form-label">Nombre Completo</label>
+                                    <input type="text" class="form-control" id="name" name="name" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Dirección de Correo Electrónico</label>
+                                    <input type="email" class="form-control" id="email" name="email" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="password" class="form-label">Contraseña</label>
+                                    <input type="password" class="form-control" id="password" name="password" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="confirmPassword" class="form-label">Confirmar Contraseña</label>
+                                    <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" required>
+                                </div>
+
+                                <!-- Radio Buttons for Newsletter Subscription -->
+                                <fieldset class="mb-3">
+                                    <legend class="form-label">Suscribirse a nuestras novedades</legend>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" id="subscribeYes" name="newsletter" value="yes">
+                                        <label class="form-check-label" for="subscribeYes">
+                                            Recibir newsletter
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" id="subscribeNo" name="newsletter" value="no" checked>
+                                        <label class="form-check-label" for="subscribeNo">
+                                            No recibir newsletter
+                                        </label>
+                                    </div>
+                                </fieldset>
+
+                                <button type="submit" class="btn btn-primary w-100">Crear Cuenta</button>
+                            </form>
+                            <div class="text-center mt-3">
+                                <p>¿Ya tienes una cuenta? <a href="login.html">Inicia sesión aquí</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2024 Tu Empresa. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('registrationForm').addEventListener('submit', function(event) {
+                event.preventDefault(); // Evita el envío del formulario para demostrar la redirección
+                
+                // Obtener datos del formulario
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const password = document.getElementById('password').value;
+                const confirmPassword = document.getElementById('confirmPassword').value;
+                const newsletter = document.querySelector('input[name="newsletter"]:checked').value;
+                
+                // Validar que las contraseñas coincidan
+                if (password !== confirmPassword) {
+                    alert("Las contraseñas no coinciden.");
+                    return;
+                }
+                
+                // Almacenar datos en localStorage
+                localStorage.setItem('userName', name);
+                localStorage.setItem('userEmail', email);
+                localStorage.setItem('userPassword', password);
+                localStorage.setItem('userNewsletter', newsletter);
+
+                // Redirigir a la página de cuenta creada
+                window.location.href = 'mi-cuenta.html'; // Ajusta la URL si es necesario
+            });
+        });
+    </script>
+
+    <!-- Bootstrap JS (opcional, si necesitas funcionalidades de JavaScript de Bootstrap) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>

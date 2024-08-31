@@ -2,7 +2,6 @@
 
 // Array de productos
 const products = [
-    /* Ojos */
     /*Producto 1*/
     {
         images: [
@@ -189,8 +188,17 @@ const products = [
             '../imagenes/productos/104.png', '../imagenes/productos/105.png', '../imagenes/productos/106.png'],
         title: 'Rubor Maybelline Fit Me x 4.5 g', price: '$ 18.344',
         category: 'rostro', 
-        type: 'rubor',
+        type: 'rubor-bronceador',
         link: 'productos/producto20.html'
+    },
+    /*Producto 21*/
+    {
+        images: [
+            '../imagenes/productos/64.png', '../imagenes/productos/69.png'],
+        title: 'Máscara de Pestañas Maybelline Sensational Sky High Very Black Wtp', price: '$ 27.412',
+        category: 'ojos', 
+        type: 'mascara',
+        link: 'productos/producto21.html'
     },
     /*Producto 22*/
     {
@@ -198,8 +206,8 @@ const products = [
             '../imagenes/productos/108.png', '../imagenes/productos/109.png', '../imagenes/productos/110.png'],
         title: 'Polvo de Maquillaje Maybelline City Bronzer x 8 g', price: '$ 17.970',
         category: 'rostro', 
-        type: 'rubor',
-        link: 'productos/producto21.html'
+        type: 'rubor-bronceador',
+        link: 'productos/producto22.html'
     },
     /*Producto 23*/
     {
@@ -208,7 +216,7 @@ const products = [
         title: 'Brillo Maybelline Lifter Gloss Acido Hialuronico 5.4ml', price: '$ 19.504',
         category: 'labios', 
         type: 'brillo',
-        link: 'productos/producto22.html'
+        link: 'productos/producto23.html'
     },
     /*Producto 24*/
     {
@@ -217,7 +225,7 @@ const products = [
         title: 'Iluminador Facial Maybelline Master Chrome Metallic 6.7g', price: '$ 17.548',
         category: 'rostro', 
         type: 'contouring',
-        link: 'productos/producto23.html'
+        link: 'productos/producto24.html'
     },
     /* Rostro */
     /*Producto 25*/
@@ -227,7 +235,7 @@ const products = [
         title: 'Paleta De Maquillaje Master Contour Maybelline', price: '$ 31.287',
         category: 'rostro', 
         type: 'contouring',
-        link: 'productos/producto24.html'
+        link: 'productos/producto25.html'
     },
     /*Producto 26*/
     {
@@ -236,7 +244,7 @@ const products = [
         title: 'Paleta de Sombras Maybelline The Nudes x 9,6 g', price: '$ 27.613',
         category: 'ojos', 
         type: 'sombra-ojos',
-        link: 'productos/producto25.html'
+        link: 'productos/producto26.html'
     },
     /*Producto 27*/
     {
@@ -245,7 +253,7 @@ const products = [
         title: 'Sexteto De Sombras Compactas, Music Collection, Maybelline Reggaeton', price: '$ 22.408',
         category: 'ojos', 
         type: 'sombra-ojos',
-        link: 'productos/producto26.html'
+        link: 'productos/producto27.html'
     },
     /*Producto 28*/
     {
@@ -254,7 +262,7 @@ const products = [
         title: 'Paleta de Sombras Maybelline The Blushed Nudes x 9,6 g', price: '$ 27.613',
         category: 'ojos', 
         type: 'sombra-ojos',
-        link: 'productos/producto27.html'
+        link: 'productos/producto28.html'
     },
     /*Producto 29*/
     {
@@ -263,7 +271,7 @@ const products = [
         title: 'Paleta de Sombras Maybelline The Nudes x 9,6 g', price: '$ 27.613',
         category: 'ojos', 
         type: 'sombra-ojos',
-        link: 'productos/producto28.html'
+        link: 'productos/producto29.html'
     },
     /*Producto 30*/
     {
@@ -272,7 +280,7 @@ const products = [
         title: 'Gel para Cejas Maybelline Tatoo Brow 3D Gel x 6 ml', price: '$ 18.237',
         category: 'ojos', 
         type: 'cejas',
-        link: 'productos/producto29.html'
+        link: 'productos/producto30.html'
     },
     /*Producto 31*/
     {
@@ -281,7 +289,7 @@ const products = [
         title: 'Lapiz de Cejas Maybelline Express Brow Satin Duo', price: '$ 17.646',
         category: 'ojos', 
         type: 'cejas',
-        link: 'productos/producto30.html'
+        link: 'productos/producto31.html'
     },
     /*Producto 32*/
     {
@@ -290,7 +298,7 @@ const products = [
         title: 'Corrector facial líquido Maybelline Super Stay Superstay Active Wear 30hs', price: '$ 26.722',
         category: 'rostro', 
         type: 'corrector',
-        link: 'productos/producto31.html'
+        link: 'productos/producto32.html'
     },
     /*Producto 33*/
     {
@@ -299,7 +307,7 @@ const products = [
         title: 'Corrector De Ojeras Fit Me Maybelline New York 30ml', price: '$ 17.589',
         category: 'rostro', 
         type: 'corrector',
-        link: 'productos/producto32.html'
+        link: 'productos/producto33.html'
     },
     /*Producto 34*/
     {
@@ -308,7 +316,7 @@ const products = [
         title: 'Mascara de Pestañas Maybelline Great Lash Clear x 13 ml', price: '$ 15.986',
         category: 'ojos', 
         type: 'mascara',
-        link: 'productos/producto33.html'
+        link: 'productos/producto34.html'
     },
     /*Producto 35*/
     {
@@ -317,7 +325,7 @@ const products = [
         title: 'Máscara de Pestañas Maybelline The Falsies Lash Lift Waterproof x 8,6 ml', price: '$ 24.502',
         category: 'ojos', 
         type: 'mascara',
-        link: 'productos/producto34.html'
+        link: 'productos/producto35.html'
     },
     /*Producto 36*/
     {
@@ -326,7 +334,7 @@ const products = [
         title: 'Máscara de Pestañas Maybelline Colossal 36h Waterproof', price: '$ 19.700',
         category: 'ojos', 
         type: 'mascara',
-        link: 'productos/producto35.html'
+        link: 'productos/producto36.html'
     },
     /*Producto 37*/
     {
@@ -335,7 +343,7 @@ const products = [
         title: 'Máscara De Pestañas Maybelline Colossal Volum Express Waterproof', price: '$ 18.569',
         category: 'ojos', 
         type: 'mascara',
-        link: 'productos/producto36.html'
+        link: 'productos/producto37.html'
     },
     /* Labios*/
     /*Producto 38*/
@@ -345,7 +353,7 @@ const products = [
         title: 'Máscara de Pestañas Maybelline Great Lash Big Blackest Black x 10 ml', price: '$ 15.986',
          category: 'ojos', 
          type: 'mascara',
-         link: 'productos/producto37.html'
+         link: 'productos/producto38.html'
     },
     /*Producto 39*/
     {
@@ -354,7 +362,7 @@ const products = [
         title: 'Base Líquida de Maquillaje Maybelline Fit Me Matte Poreless Foundation x 30 ml', price: '$ 28.207',
         category: 'rostro', 
         type: 'base',
-        link: 'productos/producto38.html'
+        link: 'productos/producto39.html'
     },
     /*Producto 40*/
     {
@@ -363,7 +371,7 @@ const products = [
         title: 'Base Fit Me Maybelline Fresh Tint Con Vitamina C X 30ml', price: '$ 26.015',
         category: 'rostro', 
         type: 'base',
-        link: 'productos/producto39.html'
+        link: 'productos/producto40.html'
     },
     /*Producto 41*/
     {
@@ -372,7 +380,7 @@ const products = [
         title: 'Pre Base de Maquillaje Maybelline Fit Me Hydratante y Luminosidad Spf 20 x 30 ml', price: '$ 17.653',
         category: 'rostro', 
         type: 'pre-base',
-        link: 'productos/producto40.html'
+        link: 'productos/producto41.html'
     },
     /* Cejas*/
     /*Producto 42*/
@@ -382,7 +390,7 @@ const products = [
         title: 'Pre Base de Maquillaje Maybelline Fit Me Mate y Poreless Spf 20 x 30 ml', price: '$ 17.653',
         category: 'rostro', 
         type: 'pre-base',
-        link: 'productos/producto41.html'
+        link: 'productos/producto42.html'
     },
     /*Producto 43*/
     {
@@ -391,7 +399,7 @@ const products = [
         title: 'Delineador de Ojos Maybelline Lasting Drama Gel x 3 g', price: '$ 18.791',
         category: 'ojos', 
         type: 'delineador-ojos',
-        link: 'productos/producto42.html'
+        link: 'productos/producto43.html'
     },
     /*Producto 44*/
     {
@@ -400,7 +408,7 @@ const products = [
         title: 'Delineador de Ojos Liquido Maybelline Line Stiletto x 1,5 ml', price: '$ 18.794',
         category: 'ojos', 
         type: 'delineador-ojos',
-        link: 'productos/producto43.html'
+        link: 'productos/producto44.html'
     },
     /*Producto 45*/
     {
@@ -409,7 +417,7 @@ const products = [
         title: 'Delineador de Ojos Maybelline Hyper Precise All Day Black x 1 g', price: '$ 20.630',
         category: 'ojos', 
         type: 'delineador-ojos',
-        link: 'productos/producto44.html'
+        link: 'productos/producto45.html'
     },
     /*Producto 46*/
     {
@@ -418,7 +426,7 @@ const products = [
         title: 'Delineador de Ojos en Lapiz Maybelline Tattoo Liner Studio x 1,3 g', price: '$ 17.813',
         category: 'ojos', 
         type: 'delineador-ojos',
-        link: 'productos/producto45.html'
+        link: 'productos/producto46.html'
     },
     /*Producto 47*/
     {
@@ -427,7 +435,7 @@ const products = [
         title: 'Labial Liquido Superstay 24hs Smile Brightener Maybelline Acabado Satinado', price: '$ 18.806',
         category: 'labios', 
         type: 'labiales',
-        link: 'productos/producto46.html'
+        link: 'productos/producto47.html'
     },
     /*Producto 48*/
     {
@@ -436,7 +444,7 @@ const products = [
         title: 'Labial Liquido Superstay 24hs Super Impact Maybelline Acabado Satinado', price: '$ 18.806',
         category: 'labios', 
         type: 'labiales',
-        link: 'productos/producto47.html'
+        link: 'productos/producto48.html'
     },
     /*Producto 49*/
     {
@@ -445,7 +453,7 @@ const products = [
         title: 'Labial Maybelline Matte Ink Coffe Edition SuperStay', price: '$ 20.519',
         category: 'labios', 
         type: 'labiales',
-        link: 'productos/producto48.html'
+        link: 'productos/producto49.html'
     },
     /*Producto 50*/
     {
@@ -454,7 +462,7 @@ const products = [
         title: 'Labial Maybelline Super Stay Ink Crayon Mate', price: '$ 20.559',
         category: 'labios', 
         type: 'labiales',
-        link: 'productos/producto49.html'
+        link: 'productos/producto50.html'
     },
     /*Producto 51*/
     {
@@ -463,7 +471,7 @@ const products = [
         title: 'Labial Liquido Superstay 24hs', price: '$ 18.806',
         category: 'labios', 
         type: 'labiales',
-        link: 'productos/producto50.html'
+        link: 'productos/producto51.html'
     },
     /*Producto 52*/
     {
@@ -472,7 +480,7 @@ const products = [
         title: 'Maybelline Fit Me Matte Polvos Matificantes + Alisadores de Poros', price: '$ 14.211',
         category: 'rostro', 
         type: 'polvos',
-        link: 'productos/producto51.html'
+        link: 'productos/producto52.html'
     },
     // Añade más productos según sea necesario
 ];
@@ -564,12 +572,14 @@ function applyFiltersAndSorting() {
     const category = document.getElementById('filter-category').value;
     const type = document.getElementById('filter-type').value;
     const sortOption = document.getElementById('sort-select').value;
+    const searchQuery = document.getElementById('search-input').value;
 
-    // Filtrar productos en función de la categoría y tipo seleccionados
+    // Filtrar productos en función de la categoría, tipo seleccionados y búsqueda
     let filteredProducts = products.filter(product => {
         const matchesCategory = category === '' || product.category === category;
         const matchesType = type === '' || product.type === type;
-        return matchesCategory && matchesType;
+        const matchesSearch = searchQuery === '' || product.title.toLowerCase().includes(searchQuery.toLowerCase());
+        return matchesCategory && matchesType && matchesSearch;
     });
 
     // Ordenar productos según la selección
@@ -585,7 +595,43 @@ function applyFiltersAndSorting() {
 
     // Actualizar la visualización de los productos
     updateProductGrid(filteredProducts);
+
+    // Cerrar el modal de búsqueda
+    closeSearchModal();
 }
+
+// Añadir eventos a los botones y selects
+document.getElementById('apply-filters').addEventListener('click', () => {
+    applyFiltersAndSorting();
+});
+
+document.querySelector('.btn-clear').addEventListener('click', () => {
+    document.getElementById('filter-category').value = '';
+    document.getElementById('filter-type').value = '';
+    document.getElementById('sort-select').value = ''; // Ajusta a tu valor por defecto
+    document.getElementById('search-input').value = ''; // Limpia el campo de búsqueda
+    updateTypeOptions(); // Actualiza las opciones de tipo cuando se borra el filtro de categoría
+    applyFiltersAndSorting();
+});
+
+document.getElementById('filter-category').addEventListener('change', () => {
+    updateTypeOptions(); // Actualiza las opciones de tipo cuando cambia la categoría
+});
+
+document.getElementById('sort-select').addEventListener('change', () => {
+    applyFiltersAndSorting();
+});
+
+// Añadir evento al campo de búsqueda
+document.getElementById('search-input').addEventListener('input', () => {
+    applyFiltersAndSorting(); // Aplica filtros y ordenación cuando cambia la búsqueda
+});
+
+// Añadir evento al botón de búsqueda en el modal
+document.getElementById('search-button').addEventListener('click', () => {
+    applyFiltersAndSorting(); // Aplica filtros y ordenación cuando se presiona el botón de búsqueda
+    closeSearchModal(); // Cierra el modal después de aplicar filtros
+});
 
 // Función para actualizar las opciones de tipo basadas en la categoría seleccionada
 function updateTypeOptions() {
@@ -669,31 +715,19 @@ function showNotification(message) {
     toast.show();
 }
 
+// Cerrar el modal de búsqueda
+function closeSearchModal() {
+    const searchModal = document.getElementById('searchModal');
+    if (searchModal) {
+        const modalInstance = bootstrap.Modal.getInstance(searchModal);
+        if (modalInstance) {
+            modalInstance.hide();
+        }
+    }
+}
+
 // Cargar productos cuando el DOM esté listo
 document.addEventListener('DOMContentLoaded', () => {
     updateTypeOptions(); // Inicializa las opciones de tipo al cargar la página
-
-    // Inicializar con todos los productos (sin filtros aplicados)
-    applyFiltersAndSorting(); // Carga inicial con filtros y ordenación aplicados
-});
-
-// Añadir eventos a los botones y selects
-document.getElementById('apply-filters').addEventListener('click', () => {
-    applyFiltersAndSorting();
-});
-
-document.querySelector('.btn-clear').addEventListener('click', () => {
-    document.getElementById('filter-category').value = '';
-    document.getElementById('filter-type').value = '';
-    document.getElementById('sort-select').value = ''; // Ajusta a tu valor por defecto
-    updateTypeOptions(); // Actualiza las opciones de tipo cuando se borra el filtro de categoría
-    applyFiltersAndSorting();
-});
-
-document.getElementById('filter-category').addEventListener('change', () => {
-    updateTypeOptions(); // Actualiza las opciones de tipo cuando cambia la categoría
-});
-
-document.getElementById('sort-select').addEventListener('change', () => {
-    applyFiltersAndSorting();
+    applyFiltersAndSorting(); // Muestra los productos filtrados al cargar la página
 });

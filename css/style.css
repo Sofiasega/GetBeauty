@@ -225,14 +225,77 @@ textarea {
   height: 48px;
   /* Ajusta la altura de los botones según sea necesario */ }
 
-/* Estilos generales para el cuerpo y la fuente */
-a {
-  text-decoration: none;
-  color: inherit;
-  font-size: 12px;
-  margin-top: -10px; }
+.container {
+  max-width: 1200px; }
 
-p {
+.card {
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  height: 450px; }
+
+.card-body {
+  padding: 30px; }
+
+.card-title {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  color: #333;
+  margin-left: 10px; }
+
+.card-text {
+  margin-bottom: 20px;
+  font-size: 1rem;
+  color: #666; }
+
+.form-control {
+  border-radius: 4px;
+  box-shadow: none;
+  border: 1px solid #ccc; }
+
+.btn-primary2 {
+  width: 100%;
+  padding: 10px;
+  background-color: #e979ec;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  margin-top: 140px;
+  color: #f4f4f4; }
+
+.btn-primary2:hover {
+  background-color: #ee30be; }
+
+.btn-primary {
+  width: 100%;
+  padding: 10px;
+  background-color: #e979ec;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem; }
+
+.btn-primary:hover {
+  background-color: #ee30be; }
+
+.forgot-password,
+.register-link {
+  display: block;
+  text-align: center;
+  margin-top: 10px; }
+
+.forgot-password a,
+.register-link a {
+  color: #000;
+  text-decoration: none; }
+
+.forgot-password a:hover,
+.register-link a:hover {
+  text-decoration: underline; }
+
+.register-link {
+  margin-top: 20px; }
+
+/* Estilos generales para el cuerpo y la fuente */
+a, p {
   text-decoration: none;
   color: inherit;
   font-size: 12px;
@@ -245,9 +308,8 @@ p {
   overflow: hidden;
   width: 100%;
   height: 500px;
-  /* Aumenta la altura del banner según sea necesario */
-  z-index: 1;
-  /* Asegura que el banner esté por encima de otros elementos */ }
+  /* Ajusta según sea necesario */
+  z-index: 1; }
 
 .carousel {
   position: relative;
@@ -261,16 +323,12 @@ p {
 
 .carousel-images img {
   display: none;
-  /* Oculta todas las imágenes por defecto */
   width: 100%;
   height: 100%;
-  /* Asegura que la imagen ocupe todo el contenedor */
-  object-fit: cover;
-  /* Asegura que la imagen cubra el contenedor sin distorsionarse */ }
+  object-fit: cover; }
 
 .carousel-images img.active {
-  display: block;
-  /* Muestra solo la imagen activa */ }
+  display: block; }
 
 button.prev, button.next {
   position: absolute;
@@ -280,8 +338,7 @@ button.prev, button.next {
   color: #fff;
   border: none;
   cursor: pointer;
-  z-index: 2;
-  /* Asegura que los botones estén por encima de las imágenes */ }
+  z-index: 2; }
 
 button.prev {
   left: 10px; }
@@ -304,7 +361,6 @@ main {
 .product-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  /* Ajustar el ancho mínimo */
   gap: 20px;
   padding: 20px;
   box-sizing: border-box; }
@@ -345,11 +401,9 @@ main {
 
 /* Estilo para el título del producto */
 .product-card h2 {
-  font-size: 0.9rem !important;
+  font-size: 0.9rem;
   margin: 20px 0 10px;
-  /* Añadir margen superior de 20px */
-  text-align: left;
-  /* Alinea el texto a la izquierda */ }
+  text-align: left; }
 
 /* Estilo para la descripción del producto */
 .product-card p {
@@ -374,8 +428,7 @@ main {
   border-radius: 4px;
   border: 1px solid #ccc;
   background-color: #fff;
-  margin-bottom: 20px;
-  /* Espacio entre los menús */ }
+  margin-bottom: 20px; }
 
 /* Estilos para el contenedor de filtros */
 .filters-sidebar {
@@ -384,37 +437,30 @@ main {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   padding: 20px;
   width: 400px;
-  /* Aumenta el ancho del contenedor de filtros */
   margin-right: 20px;
-  /* Espacio entre la barra lateral y el contenedor de productos */
   margin-top: 20px; }
 
 /* Estilos para los grupos de filtros */
 .filter-group {
   display: flex;
   flex-direction: row;
-  /* Cambia la dirección del flex a horizontal */
   gap: 20px;
-  /* Espacio entre los filtros */
-  margin-bottom: 20px;
-  /* Espacio entre el grupo de filtros y otros elementos */ }
+  margin-bottom: 20px; }
 
 .filter-dropdown {
-  flex: 1;
-  /* Cada filtro ocupa el mismo espacio */ }
+  flex: 1; }
 
 .filter-dropdown label {
   display: block;
-  /* Asegura que las etiquetas se muestren encima de los menús desplegables */
-  margin-bottom: 5px;
-  /* Espacio entre la etiqueta y el menú desplegable */ }
+  margin-bottom: 5px; }
 
 /* Estilos para los botones de acción */
 .filter-actions {
-  display: flex !important;
-  justify-content: flex-start !important;
-  gap: 10px !important;
-  margin-top: -30px !important; }
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+  margin-top: 10px;
+  /* Ajusta si es necesario */ }
 
 .btn-clear, .btn-apply {
   background-color: #ec78e7;
@@ -424,15 +470,13 @@ main {
   padding: 10px 15px;
   cursor: pointer;
   font-size: 14px;
-  transition: background-color 0.3s ease;
-  display: inline-block;
-  /* Asegura que los botones se alineen en una línea */ }
+  transition: background-color 0.3s ease; }
 
 .btn-clear {
   background-color: #ccc; }
 
 .btn-clear:hover, .btn-apply:hover {
-  background-color: #0056b3; }
+  background-color: #f09ff3; }
 
 /* Estilos para el artículo */
 main {
@@ -481,6 +525,12 @@ main {
 .branch-list .card .card-title {
   margin-bottom: 10px;
   font-size: 1.5em; }
+
+.branch .card-body h2 {
+  margin: 5px 0;
+  font-size: 1em;
+  text-align: left;
+  height: 50px; }
 
 .branch .card-body p {
   margin: 5px 0;
@@ -793,6 +843,17 @@ hr {
 
 .comparison-image {
   width: 100%;
+  /* Ajusta al 100% del ancho del contenedor */
+  height: auto;
+  /* Mantiene la proporción de la imagen */
+  width: 400px;
+  /* Ajusta el tamaño máximo si es necesario */
+  margin-left: -50px;
+  display: block;
+  /* Elimina los espacios adicionales debajo de la imagen */ }
+
+.custom-banner {
+  width: 600%;
   height: auto;
   margin-bottom: 10px; }
 
@@ -952,3 +1013,20 @@ footer .text-center {
   /* Opcional: para hacer el texto más destacado */
   font-size: 1em;
   /* Ajusta el tamaño de la fuente según tu diseño */ }
+
+/* search.css */
+/* Estilos para el modal de búsqueda */
+.modal-content {
+  border-radius: 8px; }
+
+.modal-header {
+  border-bottom: 0; }
+
+.modal-body {
+  padding: 20px; }
+
+#search-input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px; }

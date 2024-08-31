@@ -44,8 +44,12 @@
           </li>
           <li class="nav-item"><a href="#login" class="nav-link"><img src="../imagenes/usuario.png" alt="Usuario"
                 width="22"></a></li>
-          <li class="nav-item"><a href="#buscar" class="nav-link"><img src="../imagenes/lupa.png" alt="Buscar"
-                width="22"></a></li>
+          <!-- Ícono de lupa para buscar -->
+          <li class="nav-item">
+            <a href="#" id="search-icon" class="nav-link">
+                <img src="../imagenes/lupa.png" alt="Buscar" width="22">
+            </a>
+        </li>
         </ul>
       </div>
     </nav>
@@ -60,7 +64,7 @@
     <div class="banner">
       <div class="carousel">
         <div class="carousel-images">
-          <img src="../imagenes/productos/banner.jpg" alt="Banner Image 1">
+          <img src="../imagenes/productos/banner.jpg" alt="Banner Image 1" class="active"> <!-- Imagen activa -->
           <img src="../imagenes/productos/banner2.jpg" alt="Banner Image 2">
         </div>
         <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
@@ -82,7 +86,7 @@
               <option value="labios">Labios</option>
             </select>
           </div>
-      
+
           <div class="filter-dropdown filter-type">
             <label for="filter-type">Tipo:</label>
             <select id="filter-type" class="form-select">
@@ -109,12 +113,12 @@
             </select>
           </div>
         </div>
-      
+
         <div class="filter-actions">
           <button class="btn-clear">Borrar</button>
           <button id="apply-filters" class="btn-apply">Aplicar</button>
         </div>
-      
+
         <!-- Menú de Ordenación -->
         <div class="sort-container">
           <label for="sort-select">Ordenar por:</label>
@@ -127,7 +131,7 @@
             <option value="name-desc">Nombre: Z-A</option>
           </select>
         </div>
-      </aside>               
+      </aside>
 
       <div class="product-content">
         <div class="product-grid">
@@ -219,12 +223,34 @@
       </div>
     </div>
   </div>
+
+   <!-- Modal de Búsqueda -->
+   <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="searchModalLabel">Buscar</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- Contenido del modal: campos de búsqueda, etc. -->
+                <input type="text" id="search-input" class="form-control" placeholder="Buscar...">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" id="search-button" class="btn btn-primary">Buscar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
   <!-- Bootstrap JS Bundle -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <!-- Custom JS -->
   <script src="../js/array-products.js"></script>
   <script src="../js/carrusel.js"></script>
   <script src="../js/main.js"></script>
+  <script src="../js/busqueda.js"></script>
 
 </body>
 
