@@ -215,7 +215,7 @@ const products = [
             '../imagenes/productos/111.png', '../imagenes/productos/112.png', '../imagenes/productos/113.png'],
         title: 'Brillo Maybelline Lifter Gloss Acido Hialuronico 5.4ml', price: '$ 19.504',
         category: 'labios', 
-        type: 'brillo',
+        type: 'lip-gloss',
         link: 'productos/producto23.html'
     },
     /*Producto 24*/
@@ -227,7 +227,6 @@ const products = [
         type: 'contouring',
         link: 'productos/producto24.html'
     },
-    /* Rostro */
     /*Producto 25*/
     {
         images: [
@@ -382,11 +381,9 @@ const products = [
         type: 'pre-base',
         link: 'productos/producto41.html'
     },
-    /* Cejas*/
     /*Producto 42*/
     {
-        images: [
-            '../imagenes/productos/201.png'],
+        images: ['../imagenes/productos/201.png'],
         title: 'Pre Base de Maquillaje Maybelline Fit Me Mate y Poreless Spf 20 x 30 ml', price: '$ 17.653',
         category: 'rostro', 
         type: 'pre-base',
@@ -595,8 +592,6 @@ function applyFiltersAndSorting() {
 
     // Actualizar la visualización de los productos
     updateProductGrid(filteredProducts);
-
-    // Cerrar el modal de búsqueda
     closeSearchModal();
 }
 
@@ -615,22 +610,25 @@ document.querySelector('.btn-clear').addEventListener('click', () => {
 });
 
 document.getElementById('filter-category').addEventListener('change', () => {
-    updateTypeOptions(); // Actualiza las opciones de tipo cuando cambia la categoría
+    updateTypeOptions();
+    applyFiltersAndSorting();
+});
+
+document.getElementById('filter-type').addEventListener('change', () => {
+    applyFiltersAndSorting();
 });
 
 document.getElementById('sort-select').addEventListener('change', () => {
     applyFiltersAndSorting();
 });
 
-// Añadir evento al campo de búsqueda
 document.getElementById('search-input').addEventListener('input', () => {
-    applyFiltersAndSorting(); // Aplica filtros y ordenación cuando cambia la búsqueda
+    applyFiltersAndSorting();
 });
 
-// Añadir evento al botón de búsqueda en el modal
 document.getElementById('search-button').addEventListener('click', () => {
-    applyFiltersAndSorting(); // Aplica filtros y ordenación cuando se presiona el botón de búsqueda
-    closeSearchModal(); // Cierra el modal después de aplicar filtros
+    applyFiltersAndSorting();
+    closeSearchModal();
 });
 
 // Función para actualizar las opciones de tipo basadas en la categoría seleccionada
@@ -639,18 +637,15 @@ function updateTypeOptions() {
     const typeSelect = document.getElementById('filter-type');
     typeSelect.innerHTML = ''; // Limpiar las opciones existentes
 
-    // Crear una opción predeterminada
     const defaultOption = document.createElement('option');
     defaultOption.value = '';
     defaultOption.textContent = 'Selecciona un tipo';
     typeSelect.appendChild(defaultOption);
 
-    // Obtener tipos únicos basados en la categoría seleccionada
     const types = new Set(products
         .filter(product => category === '' || product.category === category)
         .map(product => product.type));
 
-    // Crear opciones para el filtro de tipo
     types.forEach(type => {
         const option = document.createElement('option');
         option.value = type;
@@ -658,11 +653,10 @@ function updateTypeOptions() {
         typeSelect.appendChild(option);
     });
 
-    // Aplicar filtros y ordenación con la nueva selección de tipo
     applyFiltersAndSorting();
 }
 
-// Actualiza la vista del carrito en el modal y en la interfaz de usuario
+// Función para actualizar la vista del carrito
 function updateCartUI() {
     const cartItems = document.getElementById("cartItems");
     const cartTotal = document.getElementById("cartTotal");
@@ -703,7 +697,7 @@ function updateCartUI() {
     cartTotal.textContent = `Total: $${total.toFixed(2)}`;
 }
 
-// Muestra notificaciones
+// Función para mostrar notificaciones
 function showNotification(message) {
     const toastEl = document.getElementById('notificationToast');
     const toast = new bootstrap.Toast(toastEl, {
@@ -715,19 +709,8 @@ function showNotification(message) {
     toast.show();
 }
 
-// Cerrar el modal de búsqueda
-function closeSearchModal() {
-    const searchModal = document.getElementById('searchModal');
-    if (searchModal) {
-        const modalInstance = bootstrap.Modal.getInstance(searchModal);
-        if (modalInstance) {
-            modalInstance.hide();
-        }
-    }
-}
+// Inicializar la vista del carrito
+updateCartUI();
 
-// Cargar productos cuando el DOM esté listo
-document.addEventListener('DOMContentLoaded', () => {
-    updateTypeOptions(); // Inicializa las opciones de tipo al cargar la página
-    applyFiltersAndSorting(); // Muestra los productos filtrados al cargar la página
-});
+// Llamar a la función de inicialización al cargar la página
+applyFiltersAndSorting();

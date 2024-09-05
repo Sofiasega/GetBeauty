@@ -18,7 +18,7 @@
     width: 100%;
     height: auto; /* Mantén la altura automática para mantener la proporción */
     object-fit: cover; /* Asegúrate de que la imagen cubra el área del banner */
-    box-shadow: 0 5px 15px $box-shadow-color; /* Sombreado solo abajo */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Sombreado solo abajo */
     display: block; /* Asegúrate de que la imagen se muestre como bloque */
     margin: 0; /* Elimina el margen de la imagen */
     padding: 0; /* Elimina el relleno de la imagen */
@@ -29,24 +29,26 @@
     position: absolute;
     bottom: 140px; /* Ajusta la posición vertical del botón */
     left: 12%;
+    width: 160px;
     transform: translateX(-50%);
-    background-color: $secondary-color;
-    color: $text-color;
+    background-color: #f8b6d1;
+    color: black;
     border: none;
     padding: 10px 20px;
-    font-size: $font-size-medium;
-    border-radius: $border-radius;
-    transition: background-color $transition-duration ease;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
 #segundo-banner .btn:hover {
-    background-color: $button-hover-color;
+    background-color: beige;
 }
 
 /* Estilos del contenedor de ancho completo con color de fondo */
 #productos-bg {
-    background-color: $background-color;
+    background-color: #f5f5f5;
     width: 100%;
+    height: 700px;
     padding-top: 40px; /* Espacio superior */
     padding-bottom: 40px; /* Espacio inferior */
     box-sizing: border-box; /* Incluye el padding en el cálculo del ancho */
@@ -60,77 +62,49 @@
     padding: 0 15px; /* Espacio interno opcional para el contenedor centrado */
 }
 
-/* Estilos para las tarjetas de productos */
+/* Establece una altura mínima para las tarjetas */
 #productos .card {
-    border: none;
-    transition: transform 0.3s ease-in-out;
-    display: flex;
-    flex-direction: column; /* Permite que los elementos internos se alineen verticalmente */
-    min-height: 350px; /* Ajusta este valor a la altura deseada */
-    max-width: 300px; /* Limita el ancho de las tarjetas */
-    margin: 10px auto; /* Espacio alrededor de las tarjetas */
-    box-shadow: 4px 8px rgba(0, 0, 0, 0.2); /* Sombra alrededor de las tarjetas */
-}
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    height: 630px;
+    background-color: #fff;
+    box-shadow: 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+  }
 
-/* Efecto de hover para las tarjetas */
 #productos .card:hover {
     transform: scale(1.05);
 }
 
 #productos .card-title {
-    font-size: 16px; /* Ajusta el tamaño de fuente del título */
-    color: #333; /* Ajusta el color del texto */
+    font-size: 1rem;
+    color: #495057;
+    margin-left: -1px;
 }
 
-#productos .card-text {
-    font-size: 14px; /* Ajusta el tamaño de fuente del texto */
-}
-
-/* Estilos del contenedor de botones */
-.button-group {
-    display: flex; /* Usa flexbox para alinear los botones en línea */
-    gap: 10px; /* Espacio entre los botones */
-    margin-top: 10px; /* Espacio superior opcional */
-}
-
-/* Estilos comunes para los botones */
-.button-group .btn {
-    flex: 1; /* Los botones ocupan el mismo ancho */
-    display: inline-flex; /* Usa flexbox para el botón para centrar el contenido */
-    align-items: center; /* Centra verticalmente el contenido del botón */
-    justify-content: center; /* Centra horizontalmente el contenido del botón */
-    text-align: center; /* Centra el texto dentro del botón */
-    font-size: 16px; /* Tamaño de fuente */
-    padding: 10px 20px; /* Espacio interno del botón */
-    border-radius: 4px; /* Ajusta el radio del borde si es necesario */
-    border: none; /* Elimina el borde predeterminado del botón */
-    transition: background-color 0.3s ease; /* Transición suave para el cambio de color */
-    text-decoration: none; /* Elimina el subrayado del enlace */
-}
-
-/* Estilo específico para el botón oscuro */
-.button-group .btn-dark {
-    background-color: #343a40; /* Color de fondo para el botón oscuro */
-    color: #fff; /* Color del texto */
-}
-
-/* Estilo específico para el botón oscuro */
-.button-group .btn-link {
-    background-color: #343a40; /* Color de fondo para el botón oscuro */
-    color: #fff; /* Color del texto */
-    margin-top: 0px;
-}
-
-/* Estilo del botón oscuro al pasar el cursor */
-.button-group .btn-dark:hover {
-    background-color: #23272b; /* Color de fondo al pasar el cursor */
-}
-/* Estilo del botón oscuro al pasar el cursor */
-.button-group .btn-link:hover {
-    background-color: #23272b; /* Color de fondo al pasar el cursor */
-}
-
-/* Asegúrate de que ambos botones tengan la misma altura */
-.button-group .btn, .button-group .btn-dark {
-    height: 48px; /* Ajusta la altura de los botones según sea necesario */
-}
+/* Estilo para el título del producto */
+#productos .product-card h2 {
+    font-size: 0.9rem;
+    margin: 20px 0 10px;
+    text-align: left;
+  }
+  
+  /* Estilo para la descripción del producto */
+  #productos .product-card p {
+    font-size: 0.9rem;
+    margin: 0 0 15px;
+  }
+  
+  /* Estilo para el precio del producto */
+  #productos .product-card .card-text strong {
+    font-size: 1.1rem;
+    color: #e988b5;
+  }
+  
+  #productos .product-card a {
+    color: #b8038b;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+  }

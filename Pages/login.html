@@ -1,10 +1,37 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iniciar Sesión</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login</title>
+        <!-- Meta Description -->
+        <meta name="description" content="Compra productos de belleza de alta calidad en Get Beauty. Encuentra maquillaje, skincare, y mucho más al mejor precio.">
+        <!-- Meta Keywords -->
+        <meta name="keywords" content="maquillaje, skincare, belleza, cosméticos, tienda online">
+        <!-- Meta Author -->
+        <meta name="author" content="Get Beauty">
+        
+        <!-- Google Fonts -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="./css/style.css">
+        
+        <!-- Open Graph Meta Tags for Social Media -->
+        <meta property="og:title" content="Get Beauty - Tu Tienda de Belleza Online">
+        <meta property="og:description" content="Compra productos de belleza de alta calidad en Get Beauty. Encuentra maquillaje, skincare, y mucho más al mejor precio.">
+        <meta property="og:image" content="https://www.tudominio.com/imagenes/1.jpeg">
+        <meta property="og:url" content="https://www.tudominio.com/">
+        <meta property="og:type" content="website">
+        
+        <!-- Twitter Card Meta Tags -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Get Beauty - Tu Tienda de Belleza Online">
+        <meta name="twitter:description" content="Compra productos de belleza de alta calidad en Get Beauty. Encuentra maquillaje, skincare, y mucho más al mejor precio.">
+        <meta name="twitter:image" content="https://www.tudominio.com/imagenes/1.jpeg">
+    </head>
+    
     <style>
         body {
             background-color: #f4f4f4;
@@ -69,7 +96,6 @@
             margin-top: 20px;
         }
     </style>
-</head>
 <body>
     <div class="container">
         <div class="row">
@@ -89,22 +115,25 @@
                 <div class="card">
                     <div class="card-body">
                         <h2 class="card-title">Clientes Registrados</h2>
-                        <form action="https://your-authentication-url.com/login" method="post">
+                        <form id="loginForm" action="https://your-authentication-url.com/login" method="post">
                             <div class="form-group">
                                 <label for="email">Dirección de correo electrónico</label>
                                 <input type="email" class="form-control" id="email" name="email" required>
+                                <div id="emailError" class="text-danger"></div>
                             </div>
                             <div class="form-group">
                                 <label for="password">Contraseña</label>
                                 <input type="password" class="form-control" id="password" name="password" required>
+                                <div id="passwordError" class="text-danger"></div>
                             </div>
                             <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
                             <div class="forgot-password">
                                 <a href="#">¿Olvidó su contraseña?</a>
                             </div>
+                            <div id="formMessage" class="text-center mt-3"></div>
                         </form>
                         <div class="register-link">
-                            ¿Eres nuevo? <a href="../Pages/mi-cuenta.html">Regístrate aquí</a>
+                            ¿Eres nuevo? <a href="../Pages/crear-cuenta.html">Regístrate aquí</a>
                         </div>
                     </div>
                 </div>
@@ -129,14 +158,14 @@
             form.addEventListener('submit', (event) => {
                 event.preventDefault();
 
-                // Clear previous messages
+                // Limpiar mensajes previos
                 emailError.textContent = '';
                 passwordError.textContent = '';
                 formMessage.textContent = '';
 
                 let hasError = false;
 
-                // Validate email
+                // Validar email
                 if (!emailField.value) {
                     emailError.textContent = 'El correo electrónico es requerido.';
                     hasError = true;
@@ -145,22 +174,19 @@
                     hasError = true;
                 }
 
-                // Validate password
+                // Validar contraseña
                 if (!passwordField.value) {
                     passwordError.textContent = 'La contraseña es requerida.';
                     hasError = true;
                 }
 
-                // If there are no errors, show a success message or submit the form
+                // Si no hay errores, redirigir a mi-cuenta.html
                 if (!hasError) {
                     formMessage.textContent = 'Inicio de sesión exitoso!';
                     formMessage.style.color = 'green';
-                    // Here you can handle form submission, e.g., send a request to a server
-                    // For example: 
-                    // fetch('/login', { method: 'POST', body: new FormData(form) })
-                    //   .then(response => response.json())
-                    //   .then(data => console.log(data))
-                    //   .catch(error => console.error('Error:', error));
+                    setTimeout(() => {
+                        window.location.href = "../Pages/mi-cuenta.html"; // Redirigir después de 2 segundos
+                    }, 2000);
                 }
             });
 
@@ -170,6 +196,29 @@
             }
         });
     </script>
+
+    <!-- Modal de Búsqueda -->
+    <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="searchModalLabel">Buscar</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Contenido del modal: campos de búsqueda, etc. -->
+                    <input type="text" id="search-input" class="form-control" placeholder="Buscar...">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="button" id="search-button" class="btn btn-primary">Buscar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script src="../js/array-products.js"></script>
+<script src="../js/busqueda.js"></script>
 
 </body>
 </html>
